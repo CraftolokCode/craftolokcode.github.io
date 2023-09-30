@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftolokCode</title>
+    <link rel="shortcut icon" href="kep1.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <img src="kep1.jpg" alt="" class="logo">
+        <h1>CraftolokCode</h1>
+        <nav id="pcnavigation">
+            <ul>
+                <li><a href="#serverinfo">Server</a></li>
+                <li><a href="#videok">Videók</a></li>
+                <li><a href="https://discord.gg/2vkmKfkBcb" target="_blank">Discord</a></li>
+                <li><a href="https://minecraft-statistic.net/en/server/Craftolok.html#" target="_blank">Server
+                        elérhetőség</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger-container">
+            <a href="javascript:void(0);" class="icon burger" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    <div id="ham">
+        <ul>
+            <li><a href="#serverinfo">Server</a></li>
+            <li><a href="#videok">Videók</a></li>
+            <li><a href="https://discord.gg/2vkmKfkBcb" target="_blank">Discord</a></li>
+            <li><a href="https://minecraft-statistic.net/en/server/Craftolok.html#" target="_blank">Server
+                    elérhetőség</a></li>
+        </ul>
+    </div>
+    <article>
+        <div class="Server">
+            <center>
+                <h1>Minecraft Server</h1><br><br>
+                <div class="card">
+                    <h2>IP Cím: </h2>
+                    <textarea readonly id="ip" onclick="copy_to_clip()">fsn1.bbn.one:31767</textarea>
+                </div>
+            </center>
+
+
+        </div>
+
+        <div id="videok">
+            <iframe width="640px" height="360px" src="https://www.youtube.com/embed/35cezjk5q5A"
+                title="Megnyílt a 0-24 Szerverünk #minecraftszerverünk 1.rész" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <iframe width="640px" height="360px" src="https://www.youtube.com/embed/lM4-upvT34A"
+                title="Hogyan töröljük a Temp mappát ? Win 10/11  # TechVideók 1. rész" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+    </article>
+    <footer>
+        <h1>Copyright <sup>&copy;</sup> CraftolokCode 2023</h1>
+    </footer>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900;1000&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito Sans', sans-serif;
+            user-select: none;
+        }
+
+        #videok {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            place-content: center;
+            margin-left: 250px;
+            margin-right: 250px;
+        }
+
+        textarea {
+            background-color: whitesmoke;
+            border: rgb(190, 190, 190) 1px solid;
+            border-radius: 3px;
+            font-size: 20px;
+            height: 30px;
+            width: 181px;
+            resize: none;
+            user-select: none;
+        }
+
+        textarea:focus {
+            outline: none;
+        }
+
+        .card {
+            background: #00ccff62;
+            width: fit-content;
+            padding: 20px;
+            border-radius: 10px;
+            clip-path: polygon(0 0, calc(100% - 20.00px) 0, 100% 20.00px, 100% 100%, 20.00px 100%, 0 calc(100% - 20.00px));
+        }
+
+        body {
+            scroll-behavior: smooth;
+        }
+
+        header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background: whitesmoke;
+            height: 100px;
+
+        }
+
+        #ham {
+            display: none;
+        }
+
+        #ham li,
+        #ham ul,
+        #ham a {
+            width: 100vw;
+        }
+
+        article ul {
+            list-style-type: disc;
+            list-style-type: "🔹";
+            text-align: left !important;
+        }
+
+        article .container-functions {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        article li {
+            text-align: left;
+        }
+
+        #ham a {
+            padding: 2px;
+            display: block;
+            width: 100vw;
+            /*background: #368dff;*/
+            background-color: rgba(0, 0, 0, 0.2);
+            -webkit-backdrop-filter: blur(25px);
+            backdrop-filter: blur(25px);
+            font-weight: 700;
+            font-size: 1.3em;
+            color: black;
+            text-decoration: none;
+        }
+
+        #ham a:hover {
+            transition: all .3s linear;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .hamburger-container {
+            display: none;
+        }
+
+        header h1 {
+            color: #333333;
+            margin-left: 20px;
+            line-height: 100px;
+        }
+
+        header .logo {
+            width: 90px;
+            height: auto;
+            margin-left: 10px;
+            border-radius: 50%;
+        }
+
+        header nav {
+            margin-right: 20px;
+            flex-grow: 1;
+            display: flex;
+            justify-content: end;
+        }
+
+        header ul {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            gap: 15px;
+
+        }
+
+        header a {
+            font-size: 1.4em;
+            color: black;
+            text-decoration: none;
+        }
+
+        details a {
+            color: black;
+            text-decoration: none;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 70px;
+            background: whitesmoke;
+            text-align: center;
+        }
+
+        article {
+            padding-inline: 15px;
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        article h1 {
+            font-size: 2em;
+        }
+
+        article p {
+            font-size: 1.2em;
+        }
+
+        .button {
+            display: block;
+            width: fit-content;
+            padding: 1.3em 3em;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 500;
+            color: #000;
+            background-color: whitesmoke;
+            border: none;
+            border-radius: 45px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .button:hover {
+            background-color: #2396c4;
+            box-shadow: 0px 15px 20px rgba(46, 217, 229, 0.4);
+            color: #fff;
+            transform: translateY(-7px);
+        }
+
+        .button:active {
+            transform: translateY(-1px);
+        }
+
+        @media screen and (max-width: 760px) {
+            header a {
+                font-size: 1em;
+            }
+
+            header .logo {
+                width: 70px;
+            }
+
+            header h1 {
+                font-size: 1.4em;
+            }
+            
+            #videok {
+                grid-template-columns: 1fr;
+                margin-left: 1px;
+                margin-right: 1px;
+            }
+        }
+
+        @media screen and (max-width: 560px) {
+            #pcnavigation {
+                display: none;
+            }
+
+            .hamburger-container {
+                display: flex;
+                flex-grow: 1;
+                justify-content: end;
+                margin-right: 20px;
+                font-size: 1.6em;
+            }
+
+            footer {
+                font-size: .5em;
+            }
+
+            .container-functions {
+                font-size: .8em;
+            }
+        }
+
+        @media screen and (min-width: 560px) {
+            #ham {
+                display: none !important;
+            }
+        }
+    </style>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("ham");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+
+
+
+
+
+        function copy_to_clip() {
+            var copyText = document.getElementById("ip");
+
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+
+            navigator.clipboard.writeText(copyText.value);
+
+            alert("Copied the text: " + copyText.value);
+        }
+
+    </script>
+</body>
+
+</html>
